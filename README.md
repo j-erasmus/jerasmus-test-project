@@ -7,7 +7,7 @@ Fugiat eveniet porro.
 # Rerum# Aut
 Ad totam qui...hgfj
 0. Architecto. dd
-1. Aut....
+1. Aut.
 2. Modi. 
 3. Est. 
 4. Sit. ..
