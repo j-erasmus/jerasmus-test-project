@@ -10,7 +10,7 @@ Ad totam qui.
 1. Aut.
 2. Modi. 
 3. Est. 
-4. Sit. .
+4. Sit. ...
 5. Veritatis. 
 6. Dolorem. 
 ###### Corrupti
