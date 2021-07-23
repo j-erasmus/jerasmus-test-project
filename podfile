@@ -1,0 +1,2 @@
+# Next line contains target platform settings
+platform :ios, '8.0'
