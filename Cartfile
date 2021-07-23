@@ -1,0 +1,2 @@
+gitlab "Alamofire/Alamofire" == 4.9.0
+gitlab "Alamofire/AlamofireImage" ~> 3.4
