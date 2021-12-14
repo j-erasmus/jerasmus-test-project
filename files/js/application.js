@@ -27,5 +27,5 @@
 //= require highlightjs.min
 //= require ace/ace
 //= require_tree .
-//= require d3
-//= require underscore
+= require d3
+= require underscore
