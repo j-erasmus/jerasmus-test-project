@@ -1,5 +1,5 @@
 // Variable basics
-// Variables may contain a-z, A-Z, and 1-9 and may start with a letter or an underscore
+// Variables may contain a-z, A-Z, and 1-9 and may start with a letter or an underscore test
 // types include: int, bool, string, float (others not mentioned)
 
 
