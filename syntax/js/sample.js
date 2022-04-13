@@ -93,7 +93,7 @@ function foo (bar, buz = 'def', ...rest) {
 
 foo.prototype = {};
 
-// class
+// class 123
 class Foo extends Bar {
 
     constructor() {
