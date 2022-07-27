@@ -224,7 +224,6 @@
     "yarn-deduplicate": "^5.0.0"
   },
   "optionalDependencies": {
-    "@test1": "*",
     "@test2": ">=0.0.0",
     "@test3": "1.2.3 - 2.3.4",
     "@test4": ">=1.2.3 <=2.3.4",
