@@ -236,7 +236,8 @@
     "@test11": "~1.2.3",
     "@test12": ">=1.2.3 <1.3.0",
     "@test13": "^1.2.3",
-    "@test14": ">=1.2.3 <2.0.0"
+    "@test14": ">=1.2.3 <2.0.0",
+    "@test15": "@$%ˆ&*(˜)"
   },
   "blockedDependencies": {
     "bootstrap-vue": "https://docs.gitlab.com/ee/development/fe_guide/dependencies.html#bootstrapvue"
