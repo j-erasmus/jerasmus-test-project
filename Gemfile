@@ -4,7 +4,7 @@ source 'https://rubygems.org'
 
 gem 'rails', '~> 6.1.4.7'
 
-gem 'test-chars', '<= 12.3.4'
+gem 'test->special<-chars', '<= 12.3.4'
 
 gem 'bootsnap', '~> 1.9.4', require: false
 
