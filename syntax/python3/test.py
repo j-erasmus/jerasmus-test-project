@@ -1,15 +1,12 @@
 #!/usr/local/bin/python3
 
->>> x = input("something:")
-something:10
+# Python 3
 
-yield from range(x, 0, -1)
+def test():
+    raise Exception from foo
 
->>> x
-'10'
-
->>> x = input("something:")
-something:'10' #entered data treated as string with or without ''
-
->>> x
-"'10'"
+def exceptions():
+    try:
+        print("Hello")
+    except Exception as e:
+        print("Exception")
