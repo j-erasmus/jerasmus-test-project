@@ -1,0 +1,1000 @@
+{
+  "100": {
+    "unicode": "1F4AF",
+    "unicode_alternates": [],
+    "name": "hundred points symbol",
+    "shortname": ":100:",
+    "category": "symbols",
+    "aliases": [],
+    "aliases_ascii": [],
+    "keywords": [
+      "numbers",
+      "perfect",
+      "score",
+      "100",
+      "percent",
+      "a",
+      "plus",
+      "school",
+      "quiz",
+      "test",
+      "exam",
+      "symbol",
+      "wow",
+      "win",
+      "parties"
+    ],
+    "moji": "💯"
+  },
+  "1234": {
+    "unicode": "1F522",
+    "unicode_alternates": [],
+    "name": "input symbol for numbers",
+    "shortname": ":1234:",
+    "category": "symbols",
+    "aliases": [],
+    "aliases_ascii": [],
+    "keywords": [
+      "blue-square",
+      "numbers",
+      "symbol"
+    ],
+    "moji": "🔢"
+  },
+  "8ball": {
+    "unicode": "1F3B1",
+    "unicode_alternates": [],
+    "name": "billiards",
+    "shortname": ":8ball:",
+    "category": "activity",
+    "aliases": [],
+    "aliases_ascii": [],
+    "keywords": [
+      "pool",
+      "billiards",
+      "eight ball",
+      "pocket ball",
+      "cue",
+      "game",
+      "ball",
+      "sport",
+      "luck",
+      "boys night"
+    ],
+    "moji": "🎱"
+  },
+  "a": {
+    "unicode": "1F170",
+    "unicode_alternates": [],
+    "name": "negative squared latin capital letter a",
+    "shortname": ":a:",
+    "category": "symbols",
+    "aliases": [],
+    "aliases_ascii": [],
+    "keywords": [
+      "alphabet",
+      "letter",
+      "red-square",
+      "symbol"
+    ],
+    "moji": "🅰"
+  },
+  "ab": {
+    "unicode": "1F18E",
+    "unicode_alternates": [],
+    "name": "negative squared ab",
+    "shortname": ":ab:",
+    "category": "symbols",
+    "aliases": [],
+    "aliases_ascii": [],
+    "keywords": [
+      "alphabet",
+      "red-square",
+      "symbol"
+    ],
+    "moji": "🆎"
+  },
+  "abc": {
+    "unicode": "1F524",
+    "unicode_alternates": [],
+    "name": "input symbol for latin letters",
+    "shortname": ":abc:",
+    "category": "symbols",
+    "aliases": [],
+    "aliases_ascii": [],
+    "keywords": [
+      "alphabet",
+      "blue-square",
+      "symbol"
+    ],
+    "moji": "🔤"
+  },
+  "abcd": {
+    "unicode": "1F521",
+    "unicode_alternates": [],
+    "name": "input symbol for latin small letters",
+    "shortname": ":abcd:",
+    "category": "symbols",
+    "aliases": [],
+    "aliases_ascii": [],
+    "keywords": [
+      "alphabet",
+      "blue-square",
+      "symbol"
+    ],
+    "moji": "🔡"
+  },
+  "accept": {
+    "unicode": "1F251",
+    "unicode_alternates": [],
+    "name": "circled ideograph accept",
+    "shortname": ":accept:",
+    "category": "symbols",
+    "aliases": [],
+    "aliases_ascii": [],
+    "keywords": [
+      "agree",
+      "chinese",
+      "good",
+      "kanji",
+      "ok",
+      "yes",
+      "symbol"
+    ],
+    "moji": "🉑"
+  },
+  "aerial_tramway": {
+    "unicode": "1F6A1",
+    "unicode_alternates": [],
+    "name": "aerial tramway",
+    "shortname": ":aerial_tramway:",
+    "category": "travel",
+    "aliases": [],
+    "aliases_ascii": [],
+    "keywords": [
+      "transportation",
+      "vehicle",
+      "aerial",
+      "tram",
+      "tramway",
+      "cable",
+      "transport",
+      "travel",
+      "train"
+    ],
+    "moji": "🚡"
+  },
+  "airplane": {
+    "unicode": "2708",
+    "unicode_alternates": [
+      "2708-FE0F"
+    ],
+    "name": "airplane",
+    "shortname": ":airplane:",
+    "category": "travel",
+    "aliases": [],
+    "aliases_ascii": [],
+    "keywords": [
+      "flight",
+      "transportation",
+      "vehicle",
+      "airplane",
+      "plane",
+      "airport",
+      "travel",
+      "airlines",
+      "fly",
+      "jet",
+      "jumbo",
+      "boeing",
+      "airbus",
+      "vacation"
+    ],
+    "moji": "✈"
+  },
+  "airplane_arriving": {
+    "unicode": "1F6EC",
+    "unicode_alternates": [],
+    "name": "airplane arriving",
+    "shortname": ":airplane_arriving:",
+    "category": "travel",
+    "aliases": [],
+    "aliases_ascii": [],
+    "keywords": [
+      "flight",
+      "transportation",
+      "vehicle",
+      "plane",
+      "airport",
+      "travel",
+      "airlines",
+      "fly",
+      "jet",
+      "jumbo",
+      "boeing",
+      "airbus",
+      "vacation"
+    ],
+    "moji": "🛬"
+  },
+  "airplane_departure": {
+    "unicode": "1F6EB",
+    "unicode_alternates": [],
+    "name": "airplane departure",
+    "shortname": ":airplane_departure:",
+    "category": "travel",
+    "aliases": [],
+    "aliases_ascii": [],
+    "keywords": [
+      "flight",
+      "transportation",
+      "vehicle",
+      "plane",
+      "airport",
+      "travel",
+      "airlines",
+      "fly",
+      "jet",
+      "jumbo",
+      "boeing",
+      "airbus",
+      "leaving",
+      "vacation"
+    ],
+    "moji": "🛫"
+  },
+  "airplane_small": {
+    "unicode": "1F6E9",
+    "unicode_alternates": [],
+    "name": "small airplane",
+    "shortname": ":airplane_small:",
+    "category": "travel",
+    "aliases": [
+      ":small_airplane:"
+    ],
+    "aliases_ascii": [],
+    "keywords": [
+      "flight",
+      "transportation",
+      "vehicle",
+      "plane",
+      "airport",
+      "travel",
+      "airlines",
+      "fly",
+      "jet",
+      "jumbo",
+      "boeing",
+      "airbus",
+      "vacation"
+    ],
+    "moji": "🛩"
+  },
+  "alarm_clock": {
+    "unicode": "23F0",
+    "unicode_alternates": [],
+    "name": "alarm clock",
+    "shortname": ":alarm_clock:",
+    "category": "objects",
+    "aliases": [],
+    "aliases_ascii": [],
+    "keywords": [
+      "time",
+      "wake",
+      "object"
+    ],
+    "moji": "⏰"
+  },
+  "alembic": {
+    "unicode": "2697",
+    "unicode_alternates": [],
+    "name": "alembic",
+    "shortname": ":alembic:",
+    "category": "objects",
+    "aliases": [],
+    "aliases_ascii": [],
+    "keywords": [
+      "chemistry",
+      "object",
+      "tool",
+      "science"
+    ],
+    "moji": "⚗"
+  },
+  "alien": {
+    "unicode": "1F47D",
+    "unicode_alternates": [],
+    "name": "extraterrestrial alien",
+    "shortname": ":alien:",
+    "category": "people",
+    "aliases": [],
+    "aliases_ascii": [],
+    "keywords": [
+      "UFO",
+      "paul",
+      "alien",
+      "ufo",
+      "space",
+      "monster",
+      "scientology"
+    ],
+    "moji": "👽"
+  },
+  "ambulance": {
+    "unicode": "1F691",
+    "unicode_alternates": [],
+    "name": "ambulance",
+    "shortname": ":ambulance:",
+    "category": "travel",
+    "aliases": [],
+    "aliases_ascii": [],
+    "keywords": [
+      "911",
+      "health",
+      "ambulance",
+      "emergency",
+      "medical",
+      "help",
+      "assistance",
+      "transportation"
+    ],
+    "moji": "🚑"
+  },
+  "amphora": {
+    "unicode": "1F3FA",
+    "unicode_alternates": [],
+    "name": "amphora",
+    "shortname": ":amphora:",
+    "category": "objects",
+    "aliases": [],
+    "aliases_ascii": [],
+    "keywords": [
+      "object"
+    ],
+    "moji": "🏺"
+  },
+  "anchor": {
+    "unicode": "2693",
+    "unicode_alternates": [
+      "2693-FE0F"
+    ],
+    "name": "anchor",
+    "shortname": ":anchor:",
+    "category": "travel",
+    "aliases": [],
+    "aliases_ascii": [],
+    "keywords": [
+      "ferry",
+      "ship",
+      "anchor",
+      "boat",
+      "ocean",
+      "harbor",
+      "marina",
+      "shipyard",
+      "sailor",
+      "tattoo",
+      "object",
+      "travel",
+      "vacation"
+    ],
+    "moji": "⚓"
+  },
+  "angel": {
+    "unicode": "1F47C",
+    "unicode_alternates": [],
+    "name": "baby angel",
+    "shortname": ":angel:",
+    "category": "people",
+    "aliases": [],
+    "aliases_ascii": [],
+    "keywords": [
+      "baby",
+      "angel",
+      "halo",
+      "cupid",
+      "wings",
+      "heaven",
+      "jesus",
+      "people",
+      "diversity",
+      "omg"
+    ],
+    "moji": "👼"
+  },
+  "angel_tone1": {
+    "unicode": "1F47C-1F3FB",
+    "unicode_alternates": [],
+    "name": "baby angel tone 1",
+    "shortname": ":angel_tone1:",
+    "category": "people",
+    "aliases": [],
+    "aliases_ascii": [],
+    "keywords": [
+      "halo",
+      "cupid",
+      "heaven",
+      "wings",
+      "jesus"
+    ],
+    "moji": "👼🏻"
+  },
+  "angel_tone2": {
+    "unicode": "1F47C-1F3FC",
+    "unicode_alternates": [],
+    "name": "baby angel tone 2",
+    "shortname": ":angel_tone2:",
+    "category": "people",
+    "aliases": [],
+    "aliases_ascii": [],
+    "keywords": [
+      "halo",
+      "cupid",
+      "heaven",
+      "wings",
+      "jesus"
+    ],
+    "moji": "👼🏼"
+  },
+  "angel_tone3": {
+    "unicode": "1F47C-1F3FD",
+    "unicode_alternates": [],
+    "name": "baby angel tone 3",
+    "shortname": ":angel_tone3:",
+    "category": "people",
+    "aliases": [],
+    "aliases_ascii": [],
+    "keywords": [
+      "halo",
+      "cupid",
+      "heaven",
+      "wings",
+      "jesus"
+    ],
+    "moji": "👼🏽"
+  },
+  "angel_tone4": {
+    "unicode": "1F47C-1F3FE",
+    "unicode_alternates": [],
+    "name": "baby angel tone 4",
+    "shortname": ":angel_tone4:",
+    "category": "people",
+    "aliases": [],
+    "aliases_ascii": [],
+    "keywords": [
+      "halo",
+      "cupid",
+      "heaven",
+      "wings",
+      "jesus"
+    ],
+    "moji": "👼🏾"
+  },
+  "angel_tone5": {
+    "unicode": "1F47C-1F3FF",
+    "unicode_alternates": [],
+    "name": "baby angel tone 5",
+    "shortname": ":angel_tone5:",
+    "category": "people",
+    "aliases": [],
+    "aliases_ascii": [],
+    "keywords": [
+      "halo",
+      "cupid",
+      "heaven",
+      "wings",
+      "jesus"
+    ],
+    "moji": "👼🏿"
+  },
+  "anger": {
+    "unicode": "1F4A2",
+    "unicode_alternates": [],
+    "name": "anger symbol",
+    "shortname": ":anger:",
+    "category": "symbols",
+    "aliases": [],
+    "aliases_ascii": [],
+    "keywords": [
+      "anger",
+      "angry",
+      "mad",
+      "symbol"
+    ],
+    "moji": "💢"
+  },
+  "anger_right": {
+    "unicode": "1F5EF",
+    "unicode_alternates": [],
+    "name": "right anger bubble",
+    "shortname": ":anger_right:",
+    "category": "symbols",
+    "aliases": [
+      ":right_anger_bubble:"
+    ],
+    "aliases_ascii": [],
+    "keywords": [
+      "speech",
+      "balloon",
+      "talk",
+      "mood",
+      "conversation",
+      "communication",
+      "comic",
+      "angry",
+      "symbol"
+    ],
+    "moji": "🗯"
+  },
+  "angry": {
+    "unicode": "1F620",
+    "unicode_alternates": [],
+    "name": "angry face",
+    "shortname": ":angry:",
+    "category": "people",
+    "aliases": [],
+    "aliases_ascii": [
+      ">:(",
+      ">:-(",
+      ":@"
+    ],
+    "keywords": [
+      "angry",
+      "livid",
+      "mad",
+      "vexed",
+      "irritated",
+      "annoyed",
+      "face",
+      "frustrated",
+      "smiley",
+      "emotion"
+    ],
+    "moji": "😠"
+  },
+  "anguished": {
+    "unicode": "1F627",
+    "unicode_alternates": [],
+    "name": "anguished face",
+    "shortname": ":anguished:",
+    "category": "people",
+    "aliases": [],
+    "aliases_ascii": [],
+    "keywords": [
+      "face",
+      "nervous",
+      "stunned",
+      "pain",
+      "anguish",
+      "ouch",
+      "misery",
+      "distress",
+      "grief",
+      "sad",
+      "smiley",
+      "surprised",
+      "emotion"
+    ],
+    "moji": "😧"
+  },
+  "ant": {
+    "unicode": "1F41C",
+    "unicode_alternates": [],
+    "name": "ant",
+    "shortname": ":ant:",
+    "category": "nature",
+    "aliases": [],
+    "aliases_ascii": [],
+    "keywords": [
+      "animal",
+      "insect",
+      "ant",
+      "queen",
+      "team",
+      "insects"
+    ],
+    "moji": "🐜"
+  },
+  "apple": {
+    "unicode": "1F34E",
+    "unicode_alternates": [],
+    "name": "red apple",
+    "shortname": ":apple:",
+    "category": "food",
+    "aliases": [],
+    "aliases_ascii": [],
+    "keywords": [
+      "fruit",
+      "mac",
+      "apple",
+      "electronics",
+      "red",
+      "doctor",
+      "teacher",
+      "school",
+      "core",
+      "food",
+      "creationism"
+    ],
+    "moji": "🍎"
+  },
+  "aquarius": {
+    "unicode": "2652",
+    "unicode_alternates": [
+      "2652-FE0F"
+    ],
+    "name": "aquarius",
+    "shortname": ":aquarius:",
+    "category": "symbols",
+    "aliases": [],
+    "aliases_ascii": [],
+    "keywords": [
+      "aquarius",
+      "water",
+      "bearer",
+      "astrology",
+      "greek",
+      "constellation",
+      "stars",
+      "zodiac",
+      "sign",
+      "purple-square",
+      "horoscope",
+      "symbol"
+    ],
+    "moji": "♒"
+  },
+  "aries": {
+    "unicode": "2648",
+    "unicode_alternates": [
+      "2648-FE0F"
+    ],
+    "name": "aries",
+    "shortname": ":aries:",
+    "category": "symbols",
+    "aliases": [],
+    "aliases_ascii": [],
+    "keywords": [
+      "aries",
+      "ram",
+      "astrology",
+      "greek",
+      "constellation",
+      "stars",
+      "zodiac",
+      "sign",
+      "purple-square",
+      "horoscope",
+      "symbol"
+    ],
+    "moji": "♈"
+  },
+  "arrow_backward": {
+    "unicode": "25C0",
+    "unicode_alternates": [
+      "25C0-FE0F"
+    ],
+    "name": "black left-pointing triangle",
+    "shortname": ":arrow_backward:",
+    "category": "symbols",
+    "aliases": [],
+    "aliases_ascii": [],
+    "keywords": [
+      "arrow",
+      "blue-square",
+      "symbol",
+      "triangle"
+    ],
+    "moji": "◀"
+  },
+  "arrow_double_down": {
+    "unicode": "23EC",
+    "unicode_alternates": [],
+    "name": "black down-pointing double triangle",
+    "shortname": ":arrow_double_down:",
+    "category": "symbols",
+    "aliases": [],
+    "aliases_ascii": [],
+    "keywords": [
+      "arrow",
+      "blue-square",
+      "symbol"
+    ],
+    "moji": "⏬"
+  },
+  "arrow_double_up": {
+    "unicode": "23EB",
+    "unicode_alternates": [],
+    "name": "black up-pointing double triangle",
+    "shortname": ":arrow_double_up:",
+    "category": "symbols",
+    "aliases": [],
+    "aliases_ascii": [],
+    "keywords": [
+      "arrow",
+      "blue-square",
+      "symbol"
+    ],
+    "moji": "⏫"
+  },
+  "arrow_down": {
+    "unicode": "2B07",
+    "unicode_alternates": [
+      "2B07-FE0F"
+    ],
+    "name": "downwards black arrow",
+    "shortname": ":arrow_down:",
+    "category": "symbols",
+    "aliases": [],
+    "aliases_ascii": [],
+    "keywords": [
+      "arrow",
+      "blue-square",
+      "symbol"
+    ],
+    "moji": "⬇"
+  },
+  "arrow_down_small": {
+    "unicode": "1F53D",
+    "unicode_alternates": [],
+    "name": "down-pointing small red triangle",
+    "shortname": ":arrow_down_small:",
+    "category": "symbols",
+    "aliases": [],
+    "aliases_ascii": [],
+    "keywords": [
+      "arrow",
+      "blue-square",
+      "symbol",
+      "triangle"
+    ],
+    "moji": "🔽"
+  },
+  "arrow_forward": {
+    "unicode": "25B6",
+    "unicode_alternates": [
+      "25B6-FE0F"
+    ],
+    "name": "black right-pointing triangle",
+    "shortname": ":arrow_forward:",
+    "category": "symbols",
+    "aliases": [],
+    "aliases_ascii": [],
+    "keywords": [
+      "arrow",
+      "blue-square",
+      "symbol",
+      "triangle"
+    ],
+    "moji": "▶"
+  },
+  "arrow_heading_down": {
+    "unicode": "2935",
+    "unicode_alternates": [
+      "2935-FE0F"
+    ],
+    "name": "arrow pointing rightwards then curving downwards",
+    "shortname": ":arrow_heading_down:",
+    "category": "symbols",
+    "aliases": [],
+    "aliases_ascii": [],
+    "keywords": [
+      "arrow",
+      "blue-square",
+      "symbol"
+    ],
+    "moji": "⤵"
+  },
+  "arrow_heading_up": {
+    "unicode": "2934",
+    "unicode_alternates": [
+      "2934-FE0F"
+    ],
+    "name": "arrow pointing rightwards then curving upwards",
+    "shortname": ":arrow_heading_up:",
+    "category": "symbols",
+    "aliases": [],
+    "aliases_ascii": [],
+    "keywords": [
+      "arrow",
+      "blue-square",
+      "symbol"
+    ],
+    "moji": "⤴"
+  },
+  "arrow_left": {
+    "unicode": "2B05",
+    "unicode_alternates": [
+      "2B05-FE0F"
+    ],
+    "name": "leftwards black arrow",
+    "shortname": ":arrow_left:",
+    "category": "symbols",
+    "aliases": [],
+    "aliases_ascii": [],
+    "keywords": [
+      "arrow",
+      "blue-square",
+      "previous",
+      "symbol"
+    ],
+    "moji": "⬅"
+  },
+  "arrow_lower_left": {
+    "unicode": "2199",
+    "unicode_alternates": [
+      "2199-FE0F"
+    ],
+    "name": "south west arrow",
+    "shortname": ":arrow_lower_left:",
+    "category": "symbols",
+    "aliases": [],
+    "aliases_ascii": [],
+    "keywords": [
+      "arrow",
+      "blue-square",
+      "symbol"
+    ],
+    "moji": "↙"
+  },
+  "arrow_lower_right": {
+    "unicode": "2198",
+    "unicode_alternates": [
+      "2198-FE0F"
+    ],
+    "name": "south east arrow",
+    "shortname": ":arrow_lower_right:",
+    "category": "symbols",
+    "aliases": [],
+    "aliases_ascii": [],
+    "keywords": [
+      "arrow",
+      "blue-square",
+      "symbol"
+    ],
+    "moji": "↘"
+  },
+  "arrow_right": {
+    "unicode": "27A1",
+    "unicode_alternates": [
+      "27A1-FE0F"
+    ],
+    "name": "black rightwards arrow",
+    "shortname": ":arrow_right:",
+    "category": "symbols",
+    "aliases": [],
+    "aliases_ascii": [],
+    "keywords": [
+      "blue-square",
+      "next",
+      "arrow",
+      "symbol"
+    ],
+    "moji": "➡"
+  },
+  "arrow_right_hook": {
+    "unicode": "21AA",
+    "unicode_alternates": [
+      "21AA-FE0F"
+    ],
+    "name": "rightwards arrow with hook",
+    "shortname": ":arrow_right_hook:",
+    "category": "symbols",
+    "aliases": [],
+    "aliases_ascii": [],
+    "keywords": [
+      "blue-square",
+      "arrow",
+      "symbol"
+    ],
+    "moji": "↪"
+  },
+  "arrow_up": {
+    "unicode": "2B06",
+    "unicode_alternates": [
+      "2B06-FE0F"
+    ],
+    "name": "upwards black arrow",
+    "shortname": ":arrow_up:",
+    "category": "symbols",
+    "aliases": [],
+    "aliases_ascii": [],
+    "keywords": [
+      "blue-square",
+      "arrow",
+      "symbol"
+    ],
+    "moji": "⬆"
+  },
+  "arrow_up_down": {
+    "unicode": "2195",
+    "unicode_alternates": [
+      "2195-FE0F"
+    ],
+    "name": "up down arrow",
+    "shortname": ":arrow_up_down:",
+    "category": "symbols",
+    "aliases": [],
+    "aliases_ascii": [],
+    "keywords": [
+      "blue-square",
+      "arrow",
+      "symbol"
+    ],
+    "moji": "↕"
+  },
+  "arrow_up_small": {
+    "unicode": "1F53C",
+    "unicode_alternates": [],
+    "name": "up-pointing small red triangle",
+    "shortname": ":arrow_up_small:",
+    "category": "symbols",
+    "aliases": [],
+    "aliases_ascii": [],
+    "keywords": [
+      "blue-square",
+      "arrow",
+      "symbol",
+      "triangle"
+    ],
+    "moji": "🔼"
+  },
+  "arrow_upper_left": {
+    "unicode": "2196",
+    "unicode_alternates": [
+      "2196-FE0F"
+    ],
+    "name": "north west arrow",
+    "shortname": ":arrow_upper_left:",
+    "category": "symbols",
+    "aliases": [],
+    "aliases_ascii": [],
+    "keywords": [
+      "blue-square",
+      "arrow",
+      "symbol"
+    ],
+    "moji": "↖"
+  },
+  "arrow_upper_right": {
+    "unicode": "2197",
+    "unicode_alternates": [
+      "2197-FE0F"
+    ],
+    "name": "north east arrow",
+    "shortname": ":arrow_upper_right:",
+    "category": "symbols",
+    "aliases": [],
+    "aliases_ascii": [],
+    "keywords": [
+      "blue-square",
+      "arrow",
+      "symbol"
+    ],
+    "moji": "↗"
+  },
+  "arrows_clockwise": {
+    "unicode": "1F503",
+    "unicode_alternates": [],
+    "name": "clockwise downwards and upwards open circle arrows",
+    "shortname": ":arrows_clockwise:",
+    "category": "symbols",
+    "aliases": [],
+    "aliases_ascii": [],
+    "keywords": [
+      "sync",
+      "arrow",
+      "symbol"
+    ],
+    "moji": "🔃"
+  },
+  "arrows_counterclockwise": {
+    "unicode": "1F504",
+    "unicode_alternates": [],
+    "name": "anticlockwise downwards and upwards open circle ar",
+    "shortname": ":arrows_counterclockwise:",
+    "category": "symbols",
+    "aliases": [],
+    "aliases_ascii": []
+  }
+}
