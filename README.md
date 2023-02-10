@@ -1,4 +1,4 @@
-# Please note
+# ℹ Please note
 
 Flight is **not under active development**. New pull requests will not be accepted unless they fix core bugs or security issues.
 
