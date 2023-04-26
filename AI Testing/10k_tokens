@@ -1,0 +1,750 @@
+List of maintainers and how to submit kernel changes
+====================================================
+
+Please try to follow the guidelines below.  This will make things
+easier on the maintainers.  Not all of these guidelines matter for every
+trivial patch so apply some common sense.
+
+Tips for patch submitters
+-------------------------
+
+1.	Always *test* your changes, however small, on at least 4 or
+	5 people, preferably many more.
+
+2.	Try to release a few ALPHA test versions to the net. Announce
+	them onto the kernel channel and await results. This is especially
+	important for device drivers, because often that's the only way
+	you will find things like the fact version 3 firmware needs
+	a magic fix you didn't know about, or some clown changed the
+	chips on a board and not its name.  (Don't laugh!  Look at the
+	SMC etherpower for that.)
+
+3.	Make sure your changes compile correctly in multiple
+	configurations. In particular check that changes work both as a
+	module and built into the kernel.
+
+4.	When you are happy with a change make it generally available for
+	testing and await feedback.
+
+5.	Make a patch available to the relevant maintainer in the list. Use
+	``diff -u`` to make the patch easy to merge. Be prepared to get your
+	changes sent back with seemingly silly requests about formatting
+	and variable names.  These aren't as silly as they seem. One
+	job the maintainers (and especially Linus) do is to keep things
+	looking the same. Sometimes this means that the clever hack in
+	your driver to get around a problem actually needs to become a
+	generalized kernel feature ready for next time.
+
+	PLEASE check your patch with the automated style checker
+	(scripts/checkpatch.pl) to catch trivial style violations.
+	See Documentation/process/coding-style.rst for guidance here.
+
+	PLEASE CC: the maintainers and mailing lists that are generated
+	by ``scripts/get_maintainer.pl.`` The results returned by the
+	script will be best if you have git installed and are making
+	your changes in a branch derived from Linus' latest git tree.
+	See Documentation/process/submitting-patches.rst for details.
+
+	PLEASE try to include any credit lines you want added with the
+	patch. It avoids people being missed off by mistake and makes
+	it easier to know who wants adding and who doesn't.
+
+	PLEASE document known bugs. If it doesn't work for everything
+	or does something very odd once a month document it.
+
+	PLEASE remember that submissions must be made under the terms
+	of the Linux Foundation certificate of contribution and should
+	include a Signed-off-by: line.  The current version of this
+	"Developer's Certificate of Origin" (DCO) is listed in the file
+	Documentation/process/submitting-patches.rst.
+
+6.	Make sure you have the right to send any changes you make. If you
+	do changes at work you may find your employer owns the patch
+	not you.
+
+7.	When sending security related changes or reports to a maintainer
+	please Cc: security@kernel.org, especially if the maintainer
+	does not respond. Please keep in mind that the security team is
+	a small set of people who can be efficient only when working on
+	verified bugs. Please only Cc: this list when you have identified
+	that the bug would present a short-term risk to other users if it
+	were publicly disclosed. For example, reports of address leaks do
+	not represent an immediate threat and are better handled publicly,
+	and ideally, should come with a patch proposal. Please do not send
+	automated reports to this list either. Such bugs will be handled
+	better and faster in the usual public places. See
+	Documentation/process/security-bugs.rst for details.
+
+8.	Happy hacking.
+
+Descriptions of section entries and preferred order
+---------------------------------------------------
+
+	M: *Mail* patches to: FullName <address@domain>
+	R: Designated *Reviewer*: FullName <address@domain>
+	   These reviewers should be CCed on patches.
+	L: *Mailing list* that is relevant to this area
+	S: *Status*, one of the following:
+	   Supported:	Someone is actually paid to look after this.
+	   Maintained:	Someone actually looks after it.
+	   Odd Fixes:	It has a maintainer but they don't have time to do
+			much other than throw the odd patch in. See below..
+	   Orphan:	No current maintainer [but maybe you could take the
+			role as you write your new code].
+	   Obsolete:	Old code. Something tagged obsolete generally means
+			it has been replaced by a better system and you
+			should be using that.
+	W: *Web-page* with status/info
+	Q: *Patchwork* web based patch tracking system site
+	B: URI for where to file *bugs*. A web-page with detailed bug
+	   filing info, a direct bug tracker link, or a mailto: URI.
+	C: URI for *chat* protocol, server and channel where developers
+	   usually hang out, for example irc://server/channel.
+	P: Subsystem Profile document for more details submitting
+	   patches to the given subsystem. This is either an in-tree file,
+	   or a URI. See Documentation/maintainer/maintainer-entry-profile.rst
+	   for details.
+	T: *SCM* tree type and location.
+	   Type is one of: git, hg, quilt, stgit, topgit
+	F: *Files* and directories wildcard patterns.
+	   A trailing slash includes all files and subdirectory files.
+	   F:	drivers/net/	all files in and below drivers/net
+	   F:	drivers/net/*	all files in drivers/net, but not below
+	   F:	*/net/*		all files in "any top level directory"/net
+	   One pattern per line.  Multiple F: lines acceptable.
+	X: *Excluded* files and directories that are NOT maintained, same
+	   rules as F:. Files exclusions are tested before file matches.
+	   Can be useful for excluding a specific subdirectory, for instance:
+	   F:	net/
+	   X:	net/ipv6/
+	   matches all files in and below net excluding net/ipv6/
+	N: Files and directories *Regex* patterns.
+	   N:	[^a-z]tegra	all files whose path contains tegra
+	                        (not including files like integrator)
+	   One pattern per line.  Multiple N: lines acceptable.
+	   scripts/get_maintainer.pl has different behavior for files that
+	   match F: pattern and matches of N: patterns.  By default,
+	   get_maintainer will not look at git log history when an F: pattern
+	   match occurs.  When an N: match occurs, git log history is used
+	   to also notify the people that have git commit signatures.
+	K: *Content regex* (perl extended) pattern match in a patch or file.
+	   For instance:
+	   K: of_get_profile
+	      matches patches or files that contain "of_get_profile"
+	   K: \b(printk|pr_(info|err))\b
+	      matches patches or files that contain one or more of the words
+	      printk, pr_info or pr_err
+	   One regex pattern per line.  Multiple K: lines acceptable.
+
+Maintainers List
+----------------
+
+.. note:: When reading this list, please look for the most precise areas
+          first. When adding to this list, please keep the entries in
+          alphabetical order.
+
+3C59X NETWORK DRIVER
+M:	Steffen Klassert <klassert@kernel.org>
+L:	netdev@vger.kernel.org
+S:	Odd Fixes
+F:	Documentation/networking/device_drivers/ethernet/3com/vortex.rst
+F:	drivers/net/ethernet/3com/3c59x.c
+
+3CR990 NETWORK DRIVER
+M:	David Dillow <dave@thedillows.org>
+L:	netdev@vger.kernel.org
+S:	Maintained
+F:	drivers/net/ethernet/3com/typhoon*
+
+3WARE SAS/SATA-RAID SCSI DRIVERS (3W-XXXX, 3W-9XXX, 3W-SAS)
+M:	Adam Radford <aradford@gmail.com>
+L:	linux-scsi@vger.kernel.org
+S:	Supported
+W:	http://www.lsi.com
+F:	drivers/scsi/3w-*
+
+53C700 AND 53C700-66 SCSI DRIVER
+M:	"James E.J. Bottomley" <James.Bottomley@HansenPartnership.com>
+L:	linux-scsi@vger.kernel.org
+S:	Maintained
+F:	drivers/scsi/53c700*
+
+6LOWPAN GENERIC (BTLE/IEEE 802.15.4)
+M:	Alexander Aring <alex.aring@gmail.com>
+L:	linux-bluetooth@vger.kernel.org
+L:	linux-wpan@vger.kernel.org
+S:	Maintained
+F:	Documentation/networking/6lowpan.rst
+F:	include/net/6lowpan.h
+F:	net/6lowpan/
+
+6PACK NETWORK DRIVER FOR AX.25
+M:	Andreas Koensgen <ajk@comnets.uni-bremen.de>
+L:	linux-hams@vger.kernel.org
+S:	Maintained
+F:	drivers/net/hamradio/6pack.c
+
+802.11 (including CFG80211/NL80211)
+M:	Johannes Berg <johannes@sipsolutions.net>
+L:	linux-wireless@vger.kernel.org
+S:	Maintained
+W:	https://wireless.wiki.kernel.org/
+Q:	https://patchwork.kernel.org/project/linux-wireless/list/
+T:	git git://git.kernel.org/pub/scm/linux/kernel/git/wireless/wireless.git
+T:	git git://git.kernel.org/pub/scm/linux/kernel/git/wireless/wireless-next.git
+F:	Documentation/driver-api/80211/cfg80211.rst
+F:	Documentation/networking/regulatory.rst
+F:	include/linux/ieee80211.h
+F:	include/net/cfg80211.h
+F:	include/net/ieee80211_radiotap.h
+F:	include/net/iw_handler.h
+F:	include/net/wext.h
+F:	include/uapi/linux/nl80211.h
+F:	include/uapi/linux/wireless.h
+F:	net/wireless/
+
+8169 10/100/1000 GIGABIT ETHERNET DRIVER
+M:	Heiner Kallweit <hkallweit1@gmail.com>
+M:	nic_swsd@realtek.com
+L:	netdev@vger.kernel.org
+S:	Maintained
+F:	drivers/net/ethernet/realtek/r8169*
+
+8250/16?50 (AND CLONE UARTS) SERIAL DRIVER
+M:	Greg Kroah-Hartman <gregkh@linuxfoundation.org>
+L:	linux-serial@vger.kernel.org
+S:	Maintained
+T:	git git://git.kernel.org/pub/scm/linux/kernel/git/gregkh/tty.git
+F:	drivers/tty/serial/8250*
+F:	include/linux/serial_8250.h
+
+8390 NETWORK DRIVERS [WD80x3/SMC-ELITE, SMC-ULTRA, NE2000, 3C503, etc.]
+L:	netdev@vger.kernel.org
+S:	Orphan / Obsolete
+F:	drivers/net/ethernet/8390/
+
+9P FILE SYSTEM
+M:	Eric Van Hensbergen <ericvh@gmail.com>
+M:	Latchesar Ionkov <lucho@ionkov.net>
+M:	Dominique Martinet <asmadeus@codewreck.org>
+R:	Christian Schoenebeck <linux_oss@crudebyte.com>
+L:	v9fs-developer@lists.sourceforge.net
+S:	Maintained
+W:	http://swik.net/v9fs
+Q:	http://patchwork.kernel.org/project/v9fs-devel/list/
+T:	git git://git.kernel.org/pub/scm/linux/kernel/git/ericvh/v9fs.git
+T:	git git://github.com/martinetd/linux.git
+F:	Documentation/filesystems/9p.rst
+F:	fs/9p/
+F:	include/net/9p/
+F:	include/trace/events/9p.h
+F:	include/uapi/linux/virtio_9p.h
+F:	net/9p/
+
+A64FX DIAG DRIVER
+M:	Hitomi Hasegawa <hasegawa-hitomi@fujitsu.com>
+S:	Supported
+F:	drivers/soc/fujitsu/a64fx-diag.c
+
+A8293 MEDIA DRIVER
+M:	Antti Palosaari <crope@iki.fi>
+L:	linux-media@vger.kernel.org
+S:	Maintained
+W:	https://linuxtv.org
+W:	http://palosaari.fi/linux/
+Q:	http://patchwork.linuxtv.org/project/linux-media/list/
+T:	git git://linuxtv.org/anttip/media_tree.git
+F:	drivers/media/dvb-frontends/a8293*
+
+AACRAID SCSI RAID DRIVER
+M:	Adaptec OEM Raid Solutions <aacraid@microsemi.com>
+L:	linux-scsi@vger.kernel.org
+S:	Supported
+W:	http://www.adaptec.com/
+F:	Documentation/scsi/aacraid.rst
+F:	drivers/scsi/aacraid/
+
+AB8500 BATTERY AND CHARGER DRIVERS
+M:	Linus Walleij <linus.walleij@linaro.org>
+F:	Documentation/devicetree/bindings/power/supply/*ab8500*
+F:	drivers/power/supply/*ab8500*
+
+ABI/API
+L:	linux-api@vger.kernel.org
+F:	include/linux/syscalls.h
+F:	kernel/sys_ni.c
+X:	include/uapi/
+X:	arch/*/include/uapi/
+
+ABIT UGURU 1,2 HARDWARE MONITOR DRIVER
+M:	Hans de Goede <hdegoede@redhat.com>
+L:	linux-hwmon@vger.kernel.org
+S:	Maintained
+F:	drivers/hwmon/abituguru.c
+
+ABIT UGURU 3 HARDWARE MONITOR DRIVER
+M:	Alistair John Strachan <alistair@devzero.co.uk>
+L:	linux-hwmon@vger.kernel.org
+S:	Maintained
+F:	drivers/hwmon/abituguru3.c
+
+ACCES 104-DIO-48E GPIO DRIVER
+M:	William Breathitt Gray <william.gray@linaro.org>
+L:	linux-gpio@vger.kernel.org
+S:	Maintained
+F:	drivers/gpio/gpio-104-dio-48e.c
+
+ACCES 104-IDI-48 GPIO DRIVER
+M:	William Breathitt Gray <william.gray@linaro.org>
+L:	linux-gpio@vger.kernel.org
+S:	Maintained
+F:	drivers/gpio/gpio-104-idi-48.c
+
+ACCES 104-IDIO-16 GPIO DRIVER
+M:	William Breathitt Gray <william.gray@linaro.org>
+L:	linux-gpio@vger.kernel.org
+S:	Maintained
+F:	drivers/gpio/gpio-104-idio-16.c
+
+ACCES 104-QUAD-8 DRIVER
+M:	William Breathitt Gray <william.gray@linaro.org>
+L:	linux-iio@vger.kernel.org
+S:	Maintained
+F:	drivers/counter/104-quad-8.c
+
+ACCES IDIO-16 GPIO LIBRARY
+M:	William Breathitt Gray <william.gray@linaro.org>
+L:	linux-gpio@vger.kernel.org
+S:	Maintained
+F:	drivers/gpio/gpio-idio-16.c
+F:	drivers/gpio/gpio-idio-16.h
+
+ACCES PCI-IDIO-16 GPIO DRIVER
+M:	William Breathitt Gray <william.gray@linaro.org>
+L:	linux-gpio@vger.kernel.org
+S:	Maintained
+F:	drivers/gpio/gpio-pci-idio-16.c
+
+ACCES PCIe-IDIO-24 GPIO DRIVER
+M:	William Breathitt Gray <william.gray@linaro.org>
+L:	linux-gpio@vger.kernel.org
+S:	Maintained
+F:	drivers/gpio/gpio-pcie-idio-24.c
+
+ACENIC DRIVER
+M:	Jes Sorensen <jes@trained-monkey.org>
+L:	linux-acenic@sunsite.dk
+S:	Maintained
+F:	drivers/net/ethernet/alteon/acenic*
+
+ACER ASPIRE ONE TEMPERATURE AND FAN DRIVER
+M:	Peter Kaestle <peter@piie.net>
+L:	platform-driver-x86@vger.kernel.org
+S:	Maintained
+W:	http://piie.net/?section=acerhdf
+F:	drivers/platform/x86/acerhdf.c
+
+ACER WMI LAPTOP EXTRAS
+M:	"Lee, Chun-Yi" <jlee@suse.com>
+L:	platform-driver-x86@vger.kernel.org
+S:	Maintained
+F:	drivers/platform/x86/acer-wmi.c
+
+ACPI
+M:	"Rafael J. Wysocki" <rafael@kernel.org>
+R:	Len Brown <lenb@kernel.org>
+L:	linux-acpi@vger.kernel.org
+S:	Supported
+Q:	https://patchwork.kernel.org/project/linux-acpi/list/
+B:	https://bugzilla.kernel.org
+T:	git git://git.kernel.org/pub/scm/linux/kernel/git/rafael/linux-pm
+F:	Documentation/ABI/testing/configfs-acpi
+F:	Documentation/ABI/testing/sysfs-bus-acpi
+F:	Documentation/firmware-guide/acpi/
+F:	arch/x86/kernel/acpi/
+F:	arch/x86/pci/acpi.c
+F:	drivers/acpi/
+F:	drivers/pci/*/*acpi*
+F:	drivers/pci/*acpi*
+F:	drivers/pnp/pnpacpi/
+F:	include/acpi/
+F:	include/linux/acpi.h
+F:	include/linux/fwnode.h
+F:	tools/power/acpi/
+
+ACPI APEI
+M:	"Rafael J. Wysocki" <rafael@kernel.org>
+R:	Len Brown <lenb@kernel.org>
+R:	James Morse <james.morse@arm.com>
+R:	Tony Luck <tony.luck@intel.com>
+R:	Borislav Petkov <bp@alien8.de>
+L:	linux-acpi@vger.kernel.org
+F:	drivers/acpi/apei/
+
+ACPI COMPONENT ARCHITECTURE (ACPICA)
+M:	Robert Moore <robert.moore@intel.com>
+M:	"Rafael J. Wysocki" <rafael.j.wysocki@intel.com>
+L:	linux-acpi@vger.kernel.org
+L:	acpica-devel@lists.linuxfoundation.org
+S:	Supported
+W:	https://acpica.org/
+W:	https://github.com/acpica/acpica/
+Q:	https://patchwork.kernel.org/project/linux-acpi/list/
+B:	https://bugzilla.kernel.org
+B:	https://bugs.acpica.org
+T:	git git://git.kernel.org/pub/scm/linux/kernel/git/rafael/linux-pm
+F:	drivers/acpi/acpica/
+F:	include/acpi/
+F:	tools/power/acpi/
+
+ACPI FOR ARM64 (ACPI/arm64)
+M:	Lorenzo Pieralisi <lpieralisi@kernel.org>
+M:	Hanjun Guo <guohanjun@huawei.com>
+M:	Sudeep Holla <sudeep.holla@arm.com>
+L:	linux-acpi@vger.kernel.org
+L:	linux-arm-kernel@lists.infradead.org (moderated for non-subscribers)
+S:	Maintained
+F:	drivers/acpi/arm64
+
+ACPI SERIAL MULTI INSTANTIATE DRIVER
+M:	Hans de Goede <hdegoede@redhat.com>
+L:	platform-driver-x86@vger.kernel.org
+S:	Maintained
+F:	drivers/platform/x86/serial-multi-instantiate.c
+
+ACPI PCC(Platform Communication Channel) MAILBOX DRIVER
+M:	Sudeep Holla <sudeep.holla@arm.com>
+L:	linux-acpi@vger.kernel.org
+S:	Supported
+F:	drivers/mailbox/pcc.c
+
+ACPI PMIC DRIVERS
+M:	"Rafael J. Wysocki" <rafael@kernel.org>
+M:	Len Brown <lenb@kernel.org>
+R:	Andy Shevchenko <andy@kernel.org>
+R:	Mika Westerberg <mika.westerberg@linux.intel.com>
+L:	linux-acpi@vger.kernel.org
+S:	Supported
+Q:	https://patchwork.kernel.org/project/linux-acpi/list/
+B:	https://bugzilla.kernel.org
+T:	git git://git.kernel.org/pub/scm/linux/kernel/git/rafael/linux-pm
+F:	drivers/acpi/pmic/
+
+ACPI THERMAL DRIVER
+M:	Rafael J. Wysocki <rafael@kernel.org>
+R:	Zhang Rui <rui.zhang@intel.com>
+L:	linux-acpi@vger.kernel.org
+S:	Supported
+B:	https://bugzilla.kernel.org
+F:	drivers/acpi/*thermal*
+
+ACPI VIOT DRIVER
+M:	Jean-Philippe Brucker <jean-philippe@linaro.org>
+L:	linux-acpi@vger.kernel.org
+L:	iommu@lists.linux.dev
+S:	Maintained
+F:	drivers/acpi/viot.c
+F:	include/linux/acpi_viot.h
+
+ACPI WMI DRIVER
+L:	platform-driver-x86@vger.kernel.org
+S:	Orphan
+F:	drivers/platform/x86/wmi.c
+F:	include/uapi/linux/wmi.h
+
+ACRN HYPERVISOR SERVICE MODULE
+M:	Fei Li <fei1.li@intel.com>
+L:	acrn-dev@lists.projectacrn.org (subscribers-only)
+S:	Supported
+W:	https://projectacrn.org
+F:	Documentation/virt/acrn/
+F:	drivers/virt/acrn/
+F:	include/uapi/linux/acrn.h
+
+AD1889 ALSA SOUND DRIVER
+L:	linux-parisc@vger.kernel.org
+S:	Maintained
+W:	https://parisc.wiki.kernel.org/index.php/AD1889
+F:	sound/pci/ad1889.*
+
+AD5110 ANALOG DEVICES DIGITAL POTENTIOMETERS DRIVER
+M:	Mugilraj Dhavachelvan <dmugil2000@gmail.com>
+L:	linux-iio@vger.kernel.org
+S:	Supported
+F:	drivers/iio/potentiometer/ad5110.c
+
+AD525X ANALOG DEVICES DIGITAL POTENTIOMETERS DRIVER
+M:	Michael Hennerich <michael.hennerich@analog.com>
+S:	Supported
+W:	http://wiki.analog.com/AD5254
+W:	https://ez.analog.com/linux-software-drivers
+F:	drivers/misc/ad525x_dpot.c
+
+AD5398 CURRENT REGULATOR DRIVER (AD5398/AD5821)
+M:	Michael Hennerich <michael.hennerich@analog.com>
+S:	Supported
+W:	http://wiki.analog.com/AD5398
+W:	https://ez.analog.com/linux-software-drivers
+F:	drivers/regulator/ad5398.c
+
+AD714X CAPACITANCE TOUCH SENSOR DRIVER (AD7142/3/7/8/7A)
+M:	Michael Hennerich <michael.hennerich@analog.com>
+S:	Supported
+W:	http://wiki.analog.com/AD7142
+W:	https://ez.analog.com/linux-software-drivers
+F:	drivers/input/misc/ad714x.c
+
+AD7877 TOUCHSCREEN DRIVER
+M:	Michael Hennerich <michael.hennerich@analog.com>
+S:	Supported
+W:	http://wiki.analog.com/AD7877
+W:	https://ez.analog.com/linux-software-drivers
+F:	drivers/input/touchscreen/ad7877.c
+
+AD7879 TOUCHSCREEN DRIVER (AD7879/AD7889)
+M:	Michael Hennerich <michael.hennerich@analog.com>
+S:	Supported
+W:	http://wiki.analog.com/AD7879
+W:	https://ez.analog.com/linux-software-drivers
+F:	drivers/input/touchscreen/ad7879.c
+
+ADDRESS SPACE LAYOUT RANDOMIZATION (ASLR)
+M:	Jiri Kosina <jikos@kernel.org>
+S:	Maintained
+
+ADF7242 IEEE 802.15.4 RADIO DRIVER
+M:	Michael Hennerich <michael.hennerich@analog.com>
+L:	linux-wpan@vger.kernel.org
+S:	Supported
+W:	https://wiki.analog.com/ADF7242
+W:	https://ez.analog.com/linux-software-drivers
+F:	Documentation/devicetree/bindings/net/ieee802154/adf7242.txt
+F:	drivers/net/ieee802154/adf7242.c
+
+ADM1025 HARDWARE MONITOR DRIVER
+M:	Jean Delvare <jdelvare@suse.com>
+L:	linux-hwmon@vger.kernel.org
+S:	Maintained
+F:	Documentation/hwmon/adm1025.rst
+F:	drivers/hwmon/adm1025.c
+
+ADM1029 HARDWARE MONITOR DRIVER
+M:	Corentin Labbe <clabbe.montjoie@gmail.com>
+L:	linux-hwmon@vger.kernel.org
+S:	Maintained
+F:	drivers/hwmon/adm1029.c
+
+ADM8211 WIRELESS DRIVER
+L:	linux-wireless@vger.kernel.org
+S:	Orphan
+W:	https://wireless.wiki.kernel.org/
+F:	drivers/net/wireless/admtek/adm8211.*
+
+ADP1653 FLASH CONTROLLER DRIVER
+M:	Sakari Ailus <sakari.ailus@iki.fi>
+L:	linux-media@vger.kernel.org
+S:	Maintained
+F:	drivers/media/i2c/adp1653.c
+F:	include/media/i2c/adp1653.h
+
+ADP5520 BACKLIGHT DRIVER WITH IO EXPANDER (ADP5520/ADP5501)
+M:	Michael Hennerich <michael.hennerich@analog.com>
+S:	Supported
+W:	http://wiki.analog.com/ADP5520
+W:	https://ez.analog.com/linux-software-drivers
+F:	drivers/gpio/gpio-adp5520.c
+F:	drivers/input/keyboard/adp5520-keys.c
+F:	drivers/leds/leds-adp5520.c
+F:	drivers/mfd/adp5520.c
+F:	drivers/video/backlight/adp5520_bl.c
+
+ADP5588 QWERTY KEYPAD AND IO EXPANDER DRIVER (ADP5588/ADP5587)
+M:	Michael Hennerich <michael.hennerich@analog.com>
+S:	Supported
+W:	http://wiki.analog.com/ADP5588
+W:	https://ez.analog.com/linux-software-drivers
+F:	Documentation/devicetree/bindings/input/adi,adp5588.yaml
+F:	drivers/input/keyboard/adp5588-keys.c
+
+ADP8860 BACKLIGHT DRIVER (ADP8860/ADP8861/ADP8863)
+M:	Michael Hennerich <michael.hennerich@analog.com>
+S:	Supported
+W:	http://wiki.analog.com/ADP8860
+W:	https://ez.analog.com/linux-software-drivers
+F:	drivers/video/backlight/adp8860_bl.c
+
+ADT746X FAN DRIVER
+M:	Colin Leroy <colin@colino.net>
+S:	Maintained
+F:	drivers/macintosh/therm_adt746x.c
+
+ADT7475 HARDWARE MONITOR DRIVER
+M:	Jean Delvare <jdelvare@suse.com>
+L:	linux-hwmon@vger.kernel.org
+S:	Maintained
+F:	Documentation/hwmon/adt7475.rst
+F:	drivers/hwmon/adt7475.c
+
+ADVANSYS SCSI DRIVER
+M:	Matthew Wilcox <willy@infradead.org>
+M:	Hannes Reinecke <hare@suse.com>
+L:	linux-scsi@vger.kernel.org
+S:	Maintained
+F:	Documentation/scsi/advansys.rst
+F:	drivers/scsi/advansys.c
+
+ADVANTECH SWBTN DRIVER
+M:	Andrea Ho <Andrea.Ho@advantech.com.tw>
+L:	platform-driver-x86@vger.kernel.org
+S:	Maintained
+F:	drivers/platform/x86/adv_swbutton.c
+
+ADXL313 THREE-AXIS DIGITAL ACCELEROMETER DRIVER
+M:	Lucas Stankus <lucas.p.stankus@gmail.com>
+S:	Supported
+F:	Documentation/devicetree/bindings/iio/accel/adi,adxl313.yaml
+F:	drivers/iio/accel/adxl313*
+
+ADXL34X THREE-AXIS DIGITAL ACCELEROMETER DRIVER (ADXL345/ADXL346)
+M:	Michael Hennerich <michael.hennerich@analog.com>
+S:	Supported
+W:	http://wiki.analog.com/ADXL345
+W:	https://ez.analog.com/linux-software-drivers
+F:	Documentation/devicetree/bindings/iio/accel/adi,adxl345.yaml
+F:	drivers/input/misc/adxl34x.c
+
+ADXL355 THREE-AXIS DIGITAL ACCELEROMETER DRIVER
+M:	Puranjay Mohan <puranjay12@gmail.com>
+L:	linux-iio@vger.kernel.org
+S:	Supported
+F:	Documentation/devicetree/bindings/iio/accel/adi,adxl355.yaml
+F:	drivers/iio/accel/adxl355.h
+F:	drivers/iio/accel/adxl355_core.c
+F:	drivers/iio/accel/adxl355_i2c.c
+F:	drivers/iio/accel/adxl355_spi.c
+
+ADXL367 THREE-AXIS DIGITAL ACCELEROMETER DRIVER
+M:	Cosmin Tanislav <cosmin.tanislav@analog.com>
+L:	linux-iio@vger.kernel.org
+S:	Supported
+W:	https://ez.analog.com/linux-software-drivers
+F:	Documentation/devicetree/bindings/iio/accel/adi,adxl367.yaml
+F:	drivers/iio/accel/adxl367*
+
+ADXL372 THREE-AXIS DIGITAL ACCELEROMETER DRIVER
+M:	Michael Hennerich <michael.hennerich@analog.com>
+S:	Supported
+W:	https://ez.analog.com/linux-software-drivers
+F:	Documentation/devicetree/bindings/iio/accel/adi,adxl372.yaml
+F:	drivers/iio/accel/adxl372.c
+F:	drivers/iio/accel/adxl372_i2c.c
+F:	drivers/iio/accel/adxl372_spi.c
+
+AF9013 MEDIA DRIVER
+M:	Antti Palosaari <crope@iki.fi>
+L:	linux-media@vger.kernel.org
+S:	Maintained
+W:	https://linuxtv.org
+W:	http://palosaari.fi/linux/
+Q:	http://patchwork.linuxtv.org/project/linux-media/list/
+T:	git git://linuxtv.org/anttip/media_tree.git
+F:	drivers/media/dvb-frontends/af9013*
+
+AF9033 MEDIA DRIVER
+M:	Antti Palosaari <crope@iki.fi>
+L:	linux-media@vger.kernel.org
+S:	Maintained
+W:	https://linuxtv.org
+W:	http://palosaari.fi/linux/
+Q:	http://patchwork.linuxtv.org/project/linux-media/list/
+T:	git git://linuxtv.org/anttip/media_tree.git
+F:	drivers/media/dvb-frontends/af9033*
+
+AFFS FILE SYSTEM
+M:	David Sterba <dsterba@suse.com>
+L:	linux-fsdevel@vger.kernel.org
+S:	Odd Fixes
+F:	Documentation/filesystems/affs.rst
+F:	fs/affs/
+
+AFS FILESYSTEM
+M:	David Howells <dhowells@redhat.com>
+M:	Marc Dionne <marc.dionne@auristor.com>
+L:	linux-afs@lists.infradead.org
+S:	Supported
+W:	https://www.infradead.org/~dhowells/kafs/
+F:	Documentation/filesystems/afs.rst
+F:	fs/afs/
+F:	include/trace/events/afs.h
+
+AGPGART DRIVER
+M:	David Airlie <airlied@redhat.com>
+L:	dri-devel@lists.freedesktop.org
+S:	Maintained
+T:	git git://anongit.freedesktop.org/drm/drm
+F:	drivers/char/agp/
+F:	include/linux/agp*
+F:	include/uapi/linux/agp*
+
+AHA152X SCSI DRIVER
+M:	"Juergen E. Fischer" <fischer@norbit.de>
+L:	linux-scsi@vger.kernel.org
+S:	Maintained
+F:	drivers/scsi/aha152x*
+F:	drivers/scsi/pcmcia/aha152x*
+
+AIC7XXX / AIC79XX SCSI DRIVER
+M:	Hannes Reinecke <hare@suse.com>
+L:	linux-scsi@vger.kernel.org
+S:	Maintained
+F:	drivers/scsi/aic7xxx/
+
+AIMSLAB FM RADIO RECEIVER DRIVER
+M:	Hans Verkuil <hverkuil@xs4all.nl>
+L:	linux-media@vger.kernel.org
+S:	Maintained
+W:	https://linuxtv.org
+T:	git git://linuxtv.org/media_tree.git
+F:	drivers/media/radio/radio-aimslab*
+
+AIO
+M:	Benjamin LaHaise <bcrl@kvack.org>
+L:	linux-aio@kvack.org
+S:	Supported
+F:	fs/aio.c
+F:	include/linux/*aio*.h
+
+AIRSPY MEDIA DRIVER
+M:	Antti Palosaari <crope@iki.fi>
+L:	linux-media@vger.kernel.org
+S:	Maintained
+W:	https://linuxtv.org
+W:	http://palosaari.fi/linux/
+Q:	http://patchwork.linuxtv.org/project/linux-media/list/
+T:	git git://linuxtv.org/anttip/media_tree.git
+F:	drivers/media/usb/airspy/
+
+ALACRITECH GIGABIT ETHERNET DRIVER
+M:	Lino Sanfilippo <LinoSanfilippo@gmx.de>
+S:	Maintained
+F:	drivers/net/ethernet/alacritech/*
+
+ALCATEL SPEEDTOUCH USB DRIVER
+M:	Duncan Sands <duncan.sands@free.fr>
+L:	linux-usb@vger.kernel.org
+S:	Maintained
+W:	http://www.linux-usb.org/SpeedTouch/
+F:	drivers/usb/atm/speedtch.c
+F:	drivers/usb/atm/usbatm.c
+
+ALCHEMY AU1XX0 MMC DRIVER
+M:	Manuel Lauss <manuel.lauss@gmail.com>
+S:	Maintained
+F:	drivers/mmc/host/au1xmmc.c
+
+ALI1563 I2C DRIVER
+M:	Rudolf Marek <r.marek@assembler.cz>
+L:	linux-i2c@vger.kernel.org
+S:	Maintained
+F:	Documentation/i2c/busses/i2c-1563.rst
+F:	drivers/i2c/busses/i2c-alidsffdsfffff1563.c
