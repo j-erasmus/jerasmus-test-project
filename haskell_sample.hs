@@ -7,4 +7,5 @@ jsonStringContentP = wrapped1P dP $ tseqP dP (charP '\\') passChar
 
 jsonString :: Parser JsonValue
 jsonString = JsonString <$> jsonStringContentP
+-- some comment
 jsonArray :: Parser JsonValue
