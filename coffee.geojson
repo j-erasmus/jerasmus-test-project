@@ -1,0 +1,631 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "coffee",
+        "marker-color": "#7e7e7e",
+        "marker-size": "medium",
+        "marker-symbol": "",
+        "name": "Chinatown Coffee",
+        "crowdedness": "Varies",
+        "power": "",
+        "wifi": "Yes",
+        "atmosphere": "Intimate"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.01872795820236,
+          38.90000717159441
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "coffee",
+        "marker-color": "#7e7e7e",
+        "marker-size": "medium",
+        "marker-symbol": "",
+        "name": "A Baked Joint",
+        "crowdedness": "No",
+        "power": "No",
+        "wifi": "No",
+        "atmosphere": "Hip"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.01659023761749,
+          38.90226780126366
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "coffee",
+        "marker-color": "#7e7e7e",
+        "marker-size": "medium",
+        "marker-symbol": "",
+        "name": "La Colombe",
+        "crowdedness": "Yes",
+        "atmosphere": "Hip",
+        "power": "No",
+        "wifi": "No"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.02011466026306,
+          38.90104460707291
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "coffee",
+        "marker-color": "#7e7e7e",
+        "marker-size": "medium",
+        "marker-symbol": "",
+        "name": "Sidomo",
+        "crowdedness": "Yes",
+        "power": "",
+        "atmosphere": "Intimate",
+        "wifi": "No"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.9999685883522,
+          38.900071881292824
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "coffee",
+        "marker-color": "#7e7e7e",
+        "marker-size": "medium",
+        "marker-symbol": "",
+        "name": "Ebenezers Coffeehouse",
+        "wifi": "Unreliable",
+        "crowdedness": "Varies",
+        "power": "Yes",
+        "atmosphere": "Work"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.00329452753067,
+          38.89712857406192
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "coffee",
+        "marker-color": "#7e7e7e",
+        "marker-size": "medium",
+        "marker-symbol": "",
+        "name": "Swing’s Coffee Roasters",
+        "wifi": "No",
+        "power": "No",
+        "crowdedness": "Yes",
+        "atmosphere": "Carry-out"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.04038143157959,
+          38.8981430894812
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "coffee",
+        "marker-color": "#7e7e7e",
+        "marker-size": "medium",
+        "marker-symbol": "",
+        "name": "Dolcezza Gelato Dupont",
+        "crowdedness": "Varies",
+        "power": "",
+        "wifi": "Yes",
+        "atmosphere": "Intimate"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.04561978578568,
+          38.912810193607015
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "coffee",
+        "marker-color": "#7e7e7e",
+        "marker-size": "medium",
+        "marker-symbol": "",
+        "name": "Filter Coffeehouse and Espresso Bar",
+        "crowdedness": "No",
+        "power": "",
+        "wifi": "",
+        "atmosphere": "Quiet"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.0450833439827,
+          38.91370969962751
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "coffee",
+        "marker-color": "#7e7e7e",
+        "marker-size": "medium",
+        "marker-symbol": "",
+        "name": "Filter Coffeehouse & Espresso Bar",
+        "power": "No",
+        "wifi": "No (explicitly)",
+        "atmosphere": "Low-tech chill",
+        "crowdedness": ""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.04431891441344,
+          38.90117819927236
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "coffee",
+        "marker-color": "#7e7e7e",
+        "marker-size": "medium",
+        "marker-symbol": "",
+        "name": "The Wydown",
+        "crowdedness": "Yes",
+        "power": "No",
+        "wifi": "No",
+        "atmosphere": "Intimate"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.03223824501038,
+          38.91653962565198
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "coffee",
+        "marker-color": "#7e7e7e",
+        "marker-size": "medium",
+        "marker-symbol": "",
+        "name": "Baked & Wired",
+        "crowdedness": "Yes",
+        "power": "Yes",
+        "wifi": "Yes",
+        "atmosphere": "Intimate"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.06039875745773,
+          38.90387295074778
+        ]
+      }
+    },    
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "coffee",
+        "marker-color": "#7e7e7e",
+        "marker-size": "medium",
+        "marker-symbol": "",
+        "name": "Peregrine Espresso",
+        "crowdedness": "Yes",
+        "atmosphere": "Carry-out",
+        "power": "No",
+        "wifi": "No"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.99724346399307,
+          38.908491988588516
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "coffee",
+        "marker-color": "#7e7e7e",
+        "marker-size": "medium",
+        "marker-symbol": "",
+        "name": "Pleasant Pops",
+        "crowdedness": "Varies",
+        "wifi": "Varies",
+        "power": "Yes",
+        "atmosphere": "Work"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.04081594944,
+          38.91764777390142
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "coffee",
+        "marker-color": "#7e7e7e",
+        "marker-size": "medium",
+        "marker-symbol": "",
+        "name": "The Potter's House",
+        "crowdedness": "Varies",
+        "power": "Yes",
+        "wifi": "Yes",
+        "atmosphere": "Work"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.0387452840805,
+          38.92496195301516
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "coffee",
+        "marker-color": "#7e7e7e",
+        "marker-size": "medium",
+        "marker-symbol": "",
+        "name": "Peregrine Espresso",
+        "wifi": "Unreliable",
+        "crowdedness": "Yes",
+        "atmosphere": "Intimate",
+        "power": "No"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.99647903442381,
+          38.88516204356269
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "coffee",
+        "marker-color": "#7e7e7e",
+        "marker-size": "medium",
+        "marker-symbol": "",
+        "name": "Peregrine Espresso",
+        "wifi": "No",
+        "crowdedness": "Varies",
+        "power": "No",
+        "atmosphere": "Carry-out"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.03223556280136,
+          38.91326516559442
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "coffee",
+        "marker-color": "#7e7e7e",
+        "marker-size": "medium",
+        "marker-symbol": "",
+        "name": "Java Shack",
+        "crowdedness": "No",
+        "power": "Yes",
+        "wifi": "Yes",
+        "atmosphere": "Chill"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.10677,
+          38.87997
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#7e7e7e",
+        "marker-size": "medium",
+        "marker-symbol": "",
+        "name": "La Colombe",
+        "crowdedness": "No",
+        "power": "No",
+        "wifi": "No",
+        "atmosphere": "Hip"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.02491849660873,
+          38.9065362916739
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#7e7e7e",
+        "marker-size": "medium",
+        "marker-symbol": "",
+        "name": "Compass",
+        "crowdedness": "yes",
+        "power": "no",
+        "wifi": "yes",
+        "atmosphere": "crowded"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.021706,
+          38.910612
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#7e7e7e",
+        "marker-size": "medium",
+        "marker-symbol": "",
+        "name": "Big Bear",
+        "crowdedness": "no",
+        "power": "yes",
+        "wifi": "yes",
+        "atmosphere": "hip"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.01244,
+          38.9127
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#7e7e7e",
+        "marker-size": "medium",
+        "marker-symbol": "",
+        "name": "Bump n' Grind",
+        "crowdedness": "no",
+        "power": "yes",
+        "wifi": "yes",
+        "atmosphere": "social"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.02950775623322,
+          38.99017815481231
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#7e7e7e",
+        "marker-size": "medium",
+        "marker-symbol": "",
+        "name": "Colony Club",
+        "crowdedness": "Varies",
+        "power": "Yes",
+        "wifi": "Yes",
+        "atmosphere": "Hip"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.02365,
+          38.92957
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#7e7e7e",
+        "marker-size": "medium",
+        "marker-symbol": "",
+        "name": "Qualia Coffee",
+        "crowdedness": "No",
+        "power": "Yes, at bar seating",
+        "wifi": "No",
+        "atmosphere": "Bohemian",
+        "seating": "range of chairs, tables, couches; nice outdoor patio space"
+
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.02457,
+          38.93919
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#7e7e7e",
+        "marker-size": "medium",
+        "marker-symbol": "",
+        "name": "Pleasant Pops",
+        "crowdedness": "No",
+        "power": "No",
+        "wifi": "No",
+        "atmosphere": "Cozy"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.03345060348511,
+          38.89948949188401
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#7e7e7e",
+        "marker-size": "medium",
+        "marker-symbol": "",
+        "name": "Compass Coffee",
+        "crowdedness": "Yes",
+        "power": "No",
+        "wifi": "No",
+        "atmosphere": "Standing"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.04154819250107,
+          38.90100912160268
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#7e7e7e",
+        "marker-size": "medium",
+        "marker-symbol": "",
+        "name": "La Colombe",
+        "crowdedness": "yes",
+        "power": "no",
+        "wifi": "yes",
+        "atmosphere": "crowded"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.0024174451828,
+          38.90537370137899
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "coffee",
+        "marker-color": "#7e7e7e",
+        "marker-size": "medium",
+        "marker-symbol": "",
+        "name": "Sweet Science",
+        "crowdedness": "no",
+        "power": "limited/hidden",
+        "wifi": "yes",
+        "atmosphere": "cozy basement warehouse",
+        "seating": "range of chairs, tables, couches"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.043946,
+          38.921371
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "coffee",
+        "marker-color": "#7e7e7e",
+        "marker-size": "medium",
+        "marker-symbol": "",
+        "name": "Tryst",
+        "crowdedness": "not usually",
+        "power": "limited/hidden",
+        "wifi": "yes",
+        "atmosphere": "big open room",
+        "seating": "table service only. group service, individual tables, couches"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.042048,
+          38.921969
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "coffee",
+        "marker-color": "#7e7e7e",
+        "marker-size": "medium",
+        "marker-symbol": "",
+        "name": "Tynan Coffee & Tea",
+        "crowdedness": "varies",
+        "power": "limited/hidden",
+        "wifi": "yes",
+        "atmosphere": "big open room",
+        "seating": "mix of chairs, tables, and high tops"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.0355437,
+          38.928553
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "coffee",
+        "marker-color": "#7e7e7e",
+        "marker-size": "medium",
+        "marker-symbol": "",
+        "name": "Philz",
+        "crowdedness": "Yes",
+        "power": "Yes",
+        "wifi": "Yes",
+        "atmosphere": "Hip"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.00111657381058,
+          38.87477006958416
+        ]
+      }
+    }
+  ]
+}
